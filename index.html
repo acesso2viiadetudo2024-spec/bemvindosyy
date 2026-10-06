@@ -6,115 +6,268 @@
 <title>Luiz Eduardo de Jesus Reis - Cabeleireiros, Manicure e Pedicure | Ubatuba-SP</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Segoe UI', Arial, sans-serif; color:#333; line-height:1.6; background:#fafafa; }
+  body { font-family:'Segoe UI', Arial, Helvetica, sans-serif; color:#333; background:#fff; }
 
-  /* CABEÇALHO */
-  header {
-    background:#1a1a2e; color:#fff; position:sticky; top:0; z-index:100;
-    box-shadow:0 2px 10px rgba(0,0,0,.3);
+  /* ---------- BARRA SUPERIOR ESCURA ---------- */
+  .barra-topo {
+    background:#2b2b2b; color:#e0e0e0; font-size:.78rem;
+    display:flex; flex-wrap:wrap; justify-content:space-between;
+    padding:8px 30px; gap:10px;
   }
-  .topo { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap;
-    justify-content:space-between; align-items:center; padding:15px 20px; gap:10px; }
-  .logo { font-size:1.3rem; font-weight:bold; }
-  .logo span { color:#e94560; }
-  nav ul { list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
-  nav a {
-    color:#fff; text-decoration:none; padding:8px 14px; border-radius:6px;
-    font-size:.92rem; transition:.3s;
+  .barra-topo div { display:flex; align-items:center; gap:6px; }
+  .barra-topo a { color:#e0e0e0; text-decoration:none; }
+  .barra-topo .destaque { color:#fff; }
+  .barra-topo .whats {
+    background:#25d366; color:#fff; padding:4px 12px; border-radius:4px;
+    font-weight:600;
   }
-  nav a:hover { background:#e94560; }
 
-  /* BANNER */
+  /* ---------- CABEÇALHO ---------- */
+  header.cabecalho {
+    background:#fff; padding:18px 30px 0;
+    border-bottom:1px solid #eee;
+    position:sticky; top:0; z-index:99;
+  }
+  .cabecalho-topo {
+    max-width:1300px; margin:auto;
+    display:flex; align-items:center; gap:30px; flex-wrap:wrap;
+  }
+  .logo { font-size:1.6rem; font-weight:800; color:#111; letter-spacing:-1px; }
+  .logo span { color:#c8102e; }
+  .logo small {
+    display:block; font-size:.55rem; letter-spacing:2px; color:#c8102e;
+    font-weight:700; margin-top:-4px;
+  }
+
+  .busca { flex:1; display:flex; max-width:600px; }
+  .busca input {
+    flex:1; padding:12px 18px; border:1px solid #ddd; border-right:none;
+    border-radius:4px 0 0 4px; font-size:.9rem; outline:none;
+  }
+  .busca button {
+    background:#111; color:#fff; border:none; padding:0 28px;
+    font-weight:700; font-size:.85rem; letter-spacing:1px;
+    border-radius:0 4px 4px 0; cursor:pointer;
+  }
+  .busca button:hover { background:#c8102e; }
+
+  .acoes { display:flex; align-items:center; gap:22px; margin-left:auto; }
+  .acoes .item { text-align:center; font-size:.72rem; color:#333; cursor:pointer; }
+  .acoes .item .icone { font-size:1.3rem; display:block; }
+
+  /* ---------- MENU ---------- */
+  nav.menu {
+    max-width:1300px; margin:auto; padding:14px 0 0;
+    display:flex; gap:6px; flex-wrap:wrap;
+  }
+  nav.menu a {
+    text-decoration:none; color:#222; font-size:.92rem;
+    padding:12px 16px; border-bottom:3px solid transparent;
+    font-weight:500; transition:.2s;
+  }
+  nav.menu a:hover, nav.menu a.ativo {
+    color:#c8102e; border-bottom-color:#c8102e;
+  }
+
+  /* ---------- CONTEÚDO PRINCIPAL ---------- */
+  main { max-width:1300px; margin:auto; padding:30px; }
+
+  /* Banner breadcrumb */
   .banner {
-    background:linear-gradient(135deg,#1a1a2e,#16213e 60%,#e94560);
-    color:#fff; text-align:center; padding:70px 20px;
+    background:#f7f7f7; border-radius:6px; padding:35px 40px;
+    margin-bottom:35px; display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:20px;
   }
-  .banner h1 { font-size:2.2rem; margin-bottom:12px; }
-  .banner p { font-size:1.05rem; opacity:.9; }
-
-  /* CONTEÚDO */
-  main { max-width:1000px; margin:auto; padding:40px 20px; }
-  section { background:#fff; border-radius:10px; padding:30px;
-    margin-bottom:30px; box-shadow:0 2px 8px rgba(0,0,0,.07); }
-  section h2 { color:#1a1a2e; border-bottom:3px solid #e94560;
-    display:inline-block; padding-bottom:6px; margin-bottom:18px; font-size:1.4rem; }
-  section h3 { color:#16213e; margin:18px 0 8px; font-size:1.1rem; }
-  section p, section li { font-size:.97rem; }
-  section ul { padding-left:22px; margin:8px 0; }
-
-  table.dados { width:100%; border-collapse:collapse; margin-top:10px; }
-  table.dados td { padding:9px 12px; border-bottom:1px solid #eee; font-size:.94rem; }
-  table.dados td:first-child { font-weight:600; color:#1a1a2e; width:42%; }
-  table.dados tr:nth-child(even) { background:#f7f7fb; }
-
-  .contato-box { background:#f2f4f8; border-left:5px solid #e94560;
-    padding:15px 18px; border-radius:6px; margin-top:12px; }
-
-  /* RODAPÉ */
-  footer { background:#0f0f1a; color:#c9c9d4; padding:45px 20px 20px; margin-top:40px; }
-  .footer-grid { max-width:1100px; margin:auto;
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
-  footer h4 { color:#fff; margin-bottom:14px; font-size:1.05rem;
-    border-bottom:2px solid #e94560; display:inline-block; padding-bottom:5px; }
-  footer p, footer li { font-size:.88rem; margin-bottom:6px; }
-  footer ul { list-style:none; }
-  footer a { color:#c9c9d4; text-decoration:none; transition:.3s; }
-  footer a:hover { color:#e94560; }
-
-  .relogio {
-    background:#1a1a2e; border:1px solid #2a2a45; border-radius:8px;
-    padding:12px 16px; text-align:center; margin-top:10px;
+  .banner .txt .breadcrumb {
+    font-size:.82rem; color:#888; margin-bottom:10px;
   }
-  .relogio .hora { font-size:1.6rem; font-weight:bold; color:#e94560;
-    font-family:'Courier New', monospace; letter-spacing:2px; }
-  .relogio .data { font-size:.82rem; color:#a0a0b8; }
-
-  .copy { max-width:1100px; margin:30px auto 0; padding-top:18px;
-    border-top:1px solid #2a2a45; text-align:center; font-size:.82rem; color:#8888a0; }
-
-  .status-ativa { color:#25d366; font-weight:bold; }
-  .voltar-topo {
-    display:inline-block; background:#e94560; color:#fff; text-decoration:none;
-    padding:8px 16px; border-radius:6px; font-size:.85rem; margin-top:12px;
+  .banner .txt .breadcrumb a { color:#c8102e; text-decoration:none; }
+  .banner h1 {
+    font-size:2.4rem; color:#111; font-weight:900;
+    text-transform:uppercase; letter-spacing:-1px;
   }
-  .voltar-topo:hover { background:#c7304a; }
+  .banner .img {
+    width:300px; height:150px; background:linear-gradient(135deg,#c8102e,#8a0b1f);
+    border-radius:6px; display:flex; align-items:center; justify-content:center;
+    color:#fff; font-size:.9rem; font-weight:600; text-align:center; padding:10px;
+  }
+
+  /* Seções */
+  section { padding:35px 0; border-top:1px solid #eee; }
+  section:first-of-type { border-top:none; }
+  section h2 {
+    font-size:1.5rem; color:#111; margin-bottom:18px;
+    border-left:4px solid #c8102e; padding-left:12px;
+  }
+  section h3 { font-size:1.1rem; color:#222; margin:18px 0 8px; }
+  section p { font-size:.95rem; margin-bottom:10px; }
+  section ul { padding-left:22px; margin:10px 0; }
+  section li { font-size:.94rem; margin-bottom:5px; }
+
+  /* Tabela de dados */
+  table.dados { width:100%; border-collapse:collapse; margin-top:12px; font-size:.92rem; }
+  table.dados td { padding:10px 14px; border-bottom:1px solid #eee; }
+  table.dados td:first-child { font-weight:700; color:#111; width:40%; }
+  table.dados tr:nth-child(even) { background:#fafafa; }
+
+  /* Contato box */
+  .box-contato {
+    background:#f7f7f7; border-left:4px solid #c8102e;
+    padding:15px 20px; border-radius:4px; margin-top:12px;
+  }
+  .box-contato a { color:#c8102e; }
+
+  /* Cards de serviços (grade) */
+  .grid-servicos {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:25px; margin-top:20px;
+  }
+  .card {
+    border:1px solid #eee; border-radius:6px; overflow:hidden;
+    transition:.25s; background:#fff;
+  }
+  .card:hover { box-shadow:0 6px 18px rgba(0,0,0,.1); transform:translateY(-3px); }
+  .card .tag {
+    background:#25a745; color:#fff; font-size:.7rem; font-weight:700;
+    padding:3px 10px; display:inline-block; margin:12px 12px 0;
+    border-radius:3px; text-transform:uppercase;
+  }
+  .card .tag.off { background:#c8102e; }
+  .card .img-serv {
+    height:130px; background:#f2f2f2; display:flex; align-items:center;
+    justify-content:center; font-size:3rem; color:#c8102e;
+  }
+  .card .info { padding:15px; }
+  .card .info h4 { font-size:1rem; color:#111; margin-bottom:8px; font-weight:600; }
+  .card .info .preco { font-size:1.15rem; font-weight:700; color:#111; }
+  .card .info .parcela { font-size:.8rem; color:#555; margin-top:3px; }
+  .card .info .pix { font-size:.8rem; color:#25a745; font-weight:600; margin-top:5px; }
+
+  .status-ativa { color:#25a745; font-weight:700; }
+
+  /* Botões */
+  .btn {
+    display:inline-block; background:#c8102e; color:#fff; text-decoration:none;
+    padding:10px 22px; border-radius:4px; font-size:.88rem; font-weight:600;
+    transition:.2s; margin-top:12px;
+  }
+  .btn:hover { background:#8a0b1f; }
+
+  /* ---------- RODAPÉ ---------- */
+  footer {
+    background:#1c1c1c; color:#bbb; padding:45px 30px 20px; margin-top:50px;
+    font-size:.88rem;
+  }
+  .footer-grid {
+    max-width:1300px; margin:auto;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:35px;
+  }
+  footer h4 {
+    color:#fff; font-size:1rem; margin-bottom:15px;
+    text-transform:uppercase; letter-spacing:1px;
+  }
+  footer p, footer li { margin-bottom:7px; }
+  footer ul { list-style:none; padding:0; }
+  footer a { color:#bbb; text-decoration:none; transition:.2s; }
+  footer a:hover { color:#c8102e; }
+
+  .relogio-box {
+    background:#262626; border-radius:6px; padding:14px;
+    text-align:center; margin-top:10px;
+  }
+  .relogio-box .hora {
+    font-size:1.7rem; font-weight:700; color:#fff;
+    font-family:'Courier New', monospace; letter-spacing:2px;
+  }
+  .relogio-box .data { font-size:.78rem; color:#999; margin-top:4px; }
+
+  .rodape-base {
+    max-width:1300px; margin:35px auto 0; padding-top:18px;
+    border-top:1px solid #333; text-align:center;
+    font-size:.78rem; color:#888;
+  }
+
+  /* WhatsApp flutuante */
+  .whats-float {
+    position:fixed; bottom:25px; right:25px; z-index:200;
+    background:#25d366; color:#fff; width:60px; height:60px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:1.8rem; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.25);
+    transition:.25s;
+  }
+  .whats-float:hover { transform:scale(1.08); }
+
+  @media (max-width:768px) {
+    .barra-topo { font-size:.7rem; padding:6px 15px; justify-content:center; }
+    .cabecalho-topo { gap:15px; }
+    .acoes { gap:14px; }
+    .banner h1 { font-size:1.6rem; }
+    .banner .img { width:100%; }
+    main { padding:20px 15px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- ================= CABEÇALHO ================= -->
-<header>
-  <div class="topo">
-    <div class="logo">Luiz Eduardo <span>Reis</span></div>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#localizacao">Localização</a></li>
-        <li><a href="#termos">Termos de Uso</a></li>
-        <li><a href="#privacidade">Políticas de Privacidade</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- ================= BANNER ================= -->
-<div class="banner">
-  <h1>Cabeleireiros, Manicure e Pedicure</h1>
-  <p>Ubatuba – São Paulo | CNPJ 48.611.491/0001-33</p>
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="barra-topo">
+  <div>📍 Show Room em Ubatuba - SP</div>
+  <div>💰 <span class="destaque">20% OFF no PIX</span></div>
+  <div>💳 Parcele em até 12X sem juros</div>
+  <div><a href="mailto:luized.reis@gmail.com" class="whats">💬 Clique e fale com a gente</a></div>
+  <div>📞 Fale Conosco: <span class="destaque">(11) 2209-0443</span></div>
 </div>
 
-<!-- ================= CONTEÚDO ================= -->
+<!-- ============ CABEÇALHO ============ -->
+<header class="cabecalho">
+  <div class="cabecalho-topo">
+    <div class="logo">
+      Luiz Eduardo <span>Reis</span>
+      <small>A LOJA DO CABELEIREIRO</small>
+    </div>
+
+    <form class="busca" onsubmit="return false;">
+      <input type="text" placeholder="O que você procura?">
+      <button type="submit">BUSCAR</button>
+    </form>
+
+    <div class="acoes">
+      <div class="item"><span class="icone">👤</span>Conta</div>
+      <div class="item"><span class="icone">🛒</span>Carrinho</div>
+    </div>
+  </div>
+
+  <nav class="menu">
+    <a href="#sobre" class="ativo">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#contato">Contato</a>
+    <a href="#termos">Termos de Uso</a>
+    <a href="#privacidade">Políticas de Privacidade</a>
+  </nav>
+</header>
+
+<!-- ============ CONTEÚDO ============ -->
 <main>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="img">Cabeleireiros, Manicure<br>e Pedicure</div>
+    <div class="txt">
+      <div class="breadcrumb"><a href="#">Home</a> › Institucional</div>
+      <h1>Sobre a Empresa</h1>
+    </div>
+  </div>
 
   <!-- SOBRE -->
   <section id="sobre">
     <h2>Sobre</h2>
-    <p>A empresa <strong>Luiz Eduardo de Jesus Reis</strong> de CNPJ
+    <p>A empresa <strong>Luiz Eduardo de Jesus Reis</strong>, de CNPJ
       <strong>48.611.491/0001-33</strong>, foi fundada em <strong>14/11/2022</strong>
       na cidade de Ubatuba, no estado de São Paulo. Sua atividade principal,
-      conforme a Receita Federal, é <strong>96.02-5-01 – Cabeleireiros, manicure e
-      pedicure</strong>. Sua situação cadastral até o momento é
+      conforme a Receita Federal, é <strong>96.02-5-01 – Cabeleireiros, manicure
+      e pedicure</strong>. Sua situação cadastral até o momento é
       <span class="status-ativa">Ativa</span>.</p>
 
     <h3>Dados Cadastrais</h3>
@@ -137,6 +290,55 @@
     <p><strong>Principal:</strong> 96.02-5-01 – Cabeleireiros, manicure e pedicure</p>
   </section>
 
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <p>Confira alguns dos serviços oferecidos em nosso espaço:</p>
+
+    <div class="grid-servicos">
+      <div class="card">
+        <span class="tag">Disponível</span>
+        <div class="img-serv">✂️</div>
+        <div class="info">
+          <h4>Corte Masculino</h4>
+          <div class="preco">R$ 45,00</div>
+          <div class="parcela">ou 12X de R$ 4,15 sem juros</div>
+          <div class="pix">R$ 36,00 com 20% OFF no PIX</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag off">20% OFF</span>
+        <div class="img-serv">💅</div>
+        <div class="info">
+          <h4>Manicure Completa</h4>
+          <div class="preco">R$ 40,00</div>
+          <div class="parcela">ou 12X de R$ 3,70 sem juros</div>
+          <div class="pix">R$ 32,00 com 20% OFF no PIX</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag">Disponível</span>
+        <div class="img-serv">🦶</div>
+        <div class="info">
+          <h4>Pedicure</h4>
+          <div class="preco">R$ 45,00</div>
+          <div class="parcela">ou 12X de R$ 4,15 sem juros</div>
+          <div class="pix">R$ 36,00 com 20% OFF no PIX</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag off">20% OFF</span>
+        <div class="img-serv">🎨</div>
+        <div class="info">
+          <h4>Coloração</h4>
+          <div class="preco">R$ 120,00</div>
+          <div class="parcela">ou 12X de R$ 11,10 sem juros</div>
+          <div class="pix">R$ 96,00 com 20% OFF no PIX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- LOCALIZAÇÃO -->
   <section id="localizacao">
     <h2>Localização</h2>
@@ -150,31 +352,29 @@
     </table>
 
     <h3>Para correspondência</h3>
-    <div class="contato-box">
+    <div class="box-contato">
       Luiz Eduardo de Jesus Reis<br>
       Rua Coronel Ernesto de Oliveira, 55 – Loja 19<br>
       Centro – Ubatuba/SP<br>
       CEP: 11690-075
     </div>
 
-    <p style="margin-top:14px;">
-      <a class="voltar-topo"
-         href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075"
-         target="_blank" rel="noopener">📍 Procurar no Google Maps</a>
-    </p>
+    <a class="btn"
+       href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075"
+       target="_blank" rel="noopener">📍 Procurar no Google Maps</a>
   </section>
 
   <!-- CONTATO -->
   <section id="contato">
     <h2>Contato</h2>
-    <div class="contato-box">
+    <div class="box-contato">
       <strong>E-mail:</strong>
       <a href="mailto:luized.reis@gmail.com">luized.reis@gmail.com</a>
       &nbsp;(<a href="mailto:luized.reis@gmail.com">Enviar E-mail</a>)
     </div>
   </section>
 
-  <!-- TERMOS DE USO -->
+  <!-- TERMOS -->
   <section id="termos">
     <h2>Termos de Uso</h2>
     <p>Ao acessar e utilizar este site, você concorda com os termos e condições
@@ -187,8 +387,7 @@
 
     <h3>2. Uso das informações</h3>
     <p>O usuário compromete-se a utilizar o conteúdo do site apenas para fins
-      lícitos, sendo vedada qualquer reprodução, distribuição ou modificação
-      sem autorização prévia e expressa do titular.</p>
+      lícitos, sendo vedada qualquer reprodução sem autorização prévia.</p>
 
     <h3>3. Propriedade intelectual</h3>
     <p>Textos, marcas, logotipos e demais elementos deste site são de propriedade
@@ -207,7 +406,7 @@
       Ubatuba/SP para dirimir eventuais controvérsias.</p>
   </section>
 
-  <!-- POLÍTICAS DE PRIVACIDADE -->
+  <!-- PRIVACIDADE -->
   <section id="privacidade">
     <h2>Políticas de Privacidade</h2>
     <p>A sua privacidade é importante para nós. Esta política explica como
@@ -217,12 +416,11 @@
     <h3>1. Coleta de dados</h3>
     <p>Este site não coleta dados pessoais automaticamente, exceto aqueles
       fornecidos voluntariamente pelo usuário por meio do e-mail de contato
-      (luized.reis@gmail.com) ou de eventuais formulários disponíveis.</p>
+      (luized.reis@gmail.com).</p>
 
     <h3>2. Uso dos dados</h3>
     <p>Os dados fornecidos são utilizados exclusivamente para responder
-      solicitações, agendamentos e demais comunicações relacionadas aos serviços
-      prestados.</p>
+      solicitações, agendamentos e demais comunicações relacionadas aos serviços.</p>
 
     <h3>3. Compartilhamento</h3>
     <p>Não compartilhamos, vendemos ou alugamos dados pessoais a terceiros,
@@ -248,21 +446,19 @@
 
 </main>
 
-<!-- ================= RODAPÉ ================= -->
+<!-- ============ RODAPÉ ============ -->
 <footer>
   <div class="footer-grid">
 
-    <!-- Horário / Relógio -->
     <div>
       <h4>Horário de Atendimento</h4>
       <p>Segunda a Sábado</p>
-      <div class="relogio">
+      <div class="relogio-box">
         <div class="hora" id="horaAtual">--:--:--</div>
         <div class="data" id="dataAtual">Carregando...</div>
       </div>
     </div>
 
-    <!-- Dados cadastrais -->
     <div>
       <h4>Dados Cadastrais</h4>
       <ul>
@@ -276,7 +472,6 @@
       </ul>
     </div>
 
-    <!-- Localização -->
     <div>
       <h4>Localização</h4>
       <p>Rua Coronel Ernesto de Oliveira, 55<br>
@@ -289,11 +484,11 @@
       </p>
     </div>
 
-    <!-- Links institucionais -->
     <div>
       <h4>Institucional</h4>
       <ul>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
         <li><a href="#termos">Termos de Uso</a></li>
         <li><a href="#privacidade">Políticas de Privacidade</a></li>
         <li><a href="#localizacao">Localização</a></li>
@@ -303,41 +498,42 @@
 
   </div>
 
-  <div class="copy">
+  <div class="rodape-base">
     &copy; <span id="anoAtual"></span> Luiz Eduardo de Jesus Reis – CNPJ 48.611.491/0001-33.
     Todos os direitos reservados.
   </div>
 </footer>
 
-<!-- ================= SCRIPT DO RELÓGIO ================= -->
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a class="whats-float" href="https://wa.me/5511999999999" target="_blank" title="Fale conosco no WhatsApp">💬</a>
+
+<!-- ============ SCRIPT ============ -->
 <script>
   function atualizarRelogio() {
     const agora = new Date();
     const pad = n => String(n).padStart(2, '0');
-
     const hora = pad(agora.getHours()) + ':' + pad(agora.getMinutes()) + ':' + pad(agora.getSeconds());
-
-    const diasSemana = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+    const dias = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
     const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-
-    const data = diasSemana[agora.getDay()] + ', ' + pad(agora.getDate()) + ' de ' +
+    const data = dias[agora.getDay()] + ', ' + pad(agora.getDate()) + ' de ' +
                  meses[agora.getMonth()] + ' de ' + agora.getFullYear();
 
     document.getElementById('horaAtual').textContent = hora;
     document.getElementById('dataAtual').textContent = data;
     document.getElementById('anoAtual').textContent = agora.getFullYear();
   }
-
   atualizarRelogio();
   setInterval(atualizarRelogio, 1000);
 
-  // Rolagem suave nos links internos
-  document.querySelectorAll('nav a, footer a[href^="#"]').forEach(link => {
+  // Rolagem suave
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const alvo = document.querySelector(link.getAttribute('href'));
       if (alvo) {
         e.preventDefault();
-        alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        alvo.scrollIntoView({ behavior:'smooth', block:'start' });
+        document.querySelectorAll('nav.menu a').forEach(a => a.classList.remove('ativo'));
+        if (link.closest('nav.menu')) link.classList.add('ativo');
       }
     });
   });
