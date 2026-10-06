@@ -117,6 +117,30 @@
   }
   .box-contato a { color:#c8102e; }
 
+  /* ---------- LOCALIZAÇÃO EM DESTAQUE ---------- */
+  .loc-destaque {
+    background:#f7f7f7; border-radius:8px; padding:35px;
+    display:grid; grid-template-columns:1fr 1fr; gap:35px;
+    align-items:center; margin-bottom:30px;
+  }
+  .loc-destaque .loc-info h3 {
+    font-size:1.6rem; color:#111; margin-bottom:15px;
+    border-left:4px solid #c8102e; padding-left:12px;
+  }
+  .loc-destaque .loc-info .end-linha {
+    display:flex; gap:10px; align-items:flex-start;
+    padding:10px 0; border-bottom:1px solid #e5e5e5; font-size:.95rem;
+  }
+  .loc-destaque .loc-info .end-linha .ico { font-size:1.1rem; }
+  .loc-destaque .loc-info .end-linha strong { color:#111; }
+  .loc-destaque .loc-mapa {
+    width:100%; height:340px; border-radius:8px; overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,.1);
+  }
+  .loc-destaque .loc-mapa iframe {
+    width:100%; height:100%; border:0; display:block;
+  }
+
   /* Cards de serviços (grade) */
   .grid-servicos {
     display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
@@ -124,7 +148,7 @@
   }
   .card {
     border:1px solid #eee; border-radius:6px; overflow:hidden;
-    transition:.25s; background:#fff;
+    transition:.25s; background:#fff; position:relative;
   }
   .card:hover { box-shadow:0 6px 18px rgba(0,0,0,.1); transform:translateY(-3px); }
   .card .tag {
@@ -134,13 +158,8 @@
     position:absolute; z-index:2;
   }
   .card .tag.off { background:#c8102e; }
-  .card { position:relative; }
   .card .img-serv {
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-    background:#f2f2f2;
+    width:100%; height:180px; object-fit:cover; display:block; background:#f2f2f2;
   }
   .card .info { padding:15px; }
   .card .info h4 { font-size:1rem; color:#111; margin-bottom:8px; font-weight:600; }
@@ -153,10 +172,12 @@
   /* Botões */
   .btn {
     display:inline-block; background:#c8102e; color:#fff; text-decoration:none;
-    padding:10px 22px; border-radius:4px; font-size:.88rem; font-weight:600;
+    padding:11px 24px; border-radius:4px; font-size:.9rem; font-weight:600;
     transition:.2s; margin-top:12px;
   }
   .btn:hover { background:#8a0b1f; }
+  .btn-verde { background:#25d366; }
+  .btn-verde:hover { background:#1ca851; }
 
   /* ---------- RODAPÉ ---------- */
   footer {
@@ -203,6 +224,10 @@
   }
   .whats-float:hover { transform:scale(1.08); }
 
+  @media (max-width:900px) {
+    .loc-destaque { grid-template-columns:1fr; padding:20px; }
+    .loc-destaque .loc-mapa { height:280px; }
+  }
   @media (max-width:768px) {
     .barra-topo { font-size:.7rem; padding:6px 15px; justify-content:center; }
     .cabecalho-topo { gap:15px; }
@@ -244,9 +269,9 @@
   </div>
 
   <nav class="menu">
-    <a href="#sobre" class="ativo">Sobre</a>
+    <a href="#localizacao" class="ativo">Localização</a>
+    <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
-    <a href="#localizacao">Localização</a>
     <a href="#contato">Contato</a>
     <a href="#termos">Termos de Uso</a>
     <a href="#privacidade">Políticas de Privacidade</a>
@@ -258,12 +283,77 @@
 
   <!-- Banner -->
   <div class="banner">
-    <div class="img">Cabeleireiros, Manicure<br>e Pedicure</div>
+    <div class="img">Venha nos visitar<br>em Ubatuba-SP</div>
     <div class="txt">
-      <div class="breadcrumb"><a href="#">Home</a> › Institucional</div>
-      <h1>Sobre a Empresa</h1>
+      <div class="breadcrumb"><a href="#">Home</a> › Localização</div>
+      <h1>Onde Estamos</h1>
     </div>
   </div>
+
+  <!-- LOCALIZAÇÃO EM DESTAQUE -->
+  <section id="localizacao" style="border-top:none; padding-top:0;">
+    <h2>Localização</h2>
+
+    <div class="loc-destaque">
+
+      <div class="loc-info">
+        <h3>Luiz Eduardo de Jesus Reis</h3>
+
+        <div class="end-linha">
+          <span class="ico">📍</span>
+          <div><strong>Endereço:</strong><br>
+            Rua Coronel Ernesto de Oliveira, 55 – Loja 19<br>
+            Centro – Ubatuba/SP
+          </div>
+        </div>
+
+        <div class="end-linha">
+          <span class="ico">📮</span>
+          <div><strong>CEP:</strong> 11690-075</div>
+        </div>
+
+        <div class="end-linha">
+          <span class="ico">🏢</span>
+          <div><strong>CNPJ:</strong> 48.611.491/0001-33</div>
+        </div>
+
+        <div class="end-linha">
+          <span class="ico">✉️</span>
+          <div><strong>E-mail:</strong>
+            <a href="mailto:luized.reis@gmail.com" style="color:#c8102e;">luized.reis@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="end-linha" style="border-bottom:none;">
+          <span class="ico">🕐</span>
+          <div><strong>Atendimento:</strong> Segunda a Sábado</div>
+        </div>
+
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir/?api=1&destination=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075">
+          🧭 Traçar rota no Google Maps
+        </a>
+      </div>
+
+      <div class="loc-mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <h3>Para correspondência</h3>
+    <div class="box-contato">
+      Luiz Eduardo de Jesus Reis<br>
+      Rua Coronel Ernesto de Oliveira, 55 – Loja 19<br>
+      Centro – Ubatuba/SP<br>
+      CEP: 11690-075
+    </div>
+  </section>
 
   <!-- SOBRE -->
   <section id="sobre">
@@ -355,31 +445,6 @@
       </div>
 
     </div>
-  </section>
-
-  <!-- LOCALIZAÇÃO -->
-  <section id="localizacao">
-    <h2>Localização</h2>
-    <table class="dados">
-      <tr><td>Logradouro</td><td>Rua Coronel Ernesto de Oliveira, 55</td></tr>
-      <tr><td>Complemento</td><td>Loja 19</td></tr>
-      <tr><td>Bairro</td><td>Centro</td></tr>
-      <tr><td>CEP</td><td>11690-075</td></tr>
-      <tr><td>Município</td><td>Ubatuba</td></tr>
-      <tr><td>Estado</td><td>São Paulo</td></tr>
-    </table>
-
-    <h3>Para correspondência</h3>
-    <div class="box-contato">
-      Luiz Eduardo de Jesus Reis<br>
-      Rua Coronel Ernesto de Oliveira, 55 – Loja 19<br>
-      Centro – Ubatuba/SP<br>
-      CEP: 11690-075
-    </div>
-
-    <a class="btn"
-       href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075"
-       target="_blank" rel="noopener">📍 Procurar no Google Maps</a>
   </section>
 
   <!-- CONTATO -->
@@ -505,11 +570,11 @@
     <div>
       <h4>Institucional</h4>
       <ul>
+        <li><a href="#localizacao">Localização</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#termos">Termos de Uso</a></li>
         <li><a href="#privacidade">Políticas de Privacidade</a></li>
-        <li><a href="#localizacao">Localização</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
