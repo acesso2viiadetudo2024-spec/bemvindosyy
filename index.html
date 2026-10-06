@@ -1,1 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luiz Eduardo de Jesus Reis - Cabeleireiros, Manicure e Pedicure | Ubatuba-SP</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', Arial, sans-serif; color:#333; line-height:1.6; background:#fafafa; }
 
+  /* CABEÇALHO */
+  header {
+    background:#1a1a2e; color:#fff; position:sticky; top:0; z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
+  }
+  .topo { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap;
+    justify-content:space-between; align-items:center; padding:15px 20px; gap:10px; }
+  .logo { font-size:1.3rem; font-weight:bold; }
+  .logo span { color:#e94560; }
+  nav ul { list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
+  nav a {
+    color:#fff; text-decoration:none; padding:8px 14px; border-radius:6px;
+    font-size:.92rem; transition:.3s;
+  }
+  nav a:hover { background:#e94560; }
+
+  /* BANNER */
+  .banner {
+    background:linear-gradient(135deg,#1a1a2e,#16213e 60%,#e94560);
+    color:#fff; text-align:center; padding:70px 20px;
+  }
+  .banner h1 { font-size:2.2rem; margin-bottom:12px; }
+  .banner p { font-size:1.05rem; opacity:.9; }
+
+  /* CONTEÚDO */
+  main { max-width:1000px; margin:auto; padding:40px 20px; }
+  section { background:#fff; border-radius:10px; padding:30px;
+    margin-bottom:30px; box-shadow:0 2px 8px rgba(0,0,0,.07); }
+  section h2 { color:#1a1a2e; border-bottom:3px solid #e94560;
+    display:inline-block; padding-bottom:6px; margin-bottom:18px; font-size:1.4rem; }
+  section h3 { color:#16213e; margin:18px 0 8px; font-size:1.1rem; }
+  section p, section li { font-size:.97rem; }
+  section ul { padding-left:22px; margin:8px 0; }
+
+  table.dados { width:100%; border-collapse:collapse; margin-top:10px; }
+  table.dados td { padding:9px 12px; border-bottom:1px solid #eee; font-size:.94rem; }
+  table.dados td:first-child { font-weight:600; color:#1a1a2e; width:42%; }
+  table.dados tr:nth-child(even) { background:#f7f7fb; }
+
+  .contato-box { background:#f2f4f8; border-left:5px solid #e94560;
+    padding:15px 18px; border-radius:6px; margin-top:12px; }
+
+  /* RODAPÉ */
+  footer { background:#0f0f1a; color:#c9c9d4; padding:45px 20px 20px; margin-top:40px; }
+  .footer-grid { max-width:1100px; margin:auto;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+  footer h4 { color:#fff; margin-bottom:14px; font-size:1.05rem;
+    border-bottom:2px solid #e94560; display:inline-block; padding-bottom:5px; }
+  footer p, footer li { font-size:.88rem; margin-bottom:6px; }
+  footer ul { list-style:none; }
+  footer a { color:#c9c9d4; text-decoration:none; transition:.3s; }
+  footer a:hover { color:#e94560; }
+
+  .relogio {
+    background:#1a1a2e; border:1px solid #2a2a45; border-radius:8px;
+    padding:12px 16px; text-align:center; margin-top:10px;
+  }
+  .relogio .hora { font-size:1.6rem; font-weight:bold; color:#e94560;
+    font-family:'Courier New', monospace; letter-spacing:2px; }
+  .relogio .data { font-size:.82rem; color:#a0a0b8; }
+
+  .copy { max-width:1100px; margin:30px auto 0; padding-top:18px;
+    border-top:1px solid #2a2a45; text-align:center; font-size:.82rem; color:#8888a0; }
+
+  .status-ativa { color:#25d366; font-weight:bold; }
+  .voltar-topo {
+    display:inline-block; background:#e94560; color:#fff; text-decoration:none;
+    padding:8px 16px; border-radius:6px; font-size:.85rem; margin-top:12px;
+  }
+  .voltar-topo:hover { background:#c7304a; }
+</style>
+</head>
+<body>
+
+<!-- ================= CABEÇALHO ================= -->
+<header>
+  <div class="topo">
+    <div class="logo">Luiz Eduardo <span>Reis</span></div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+        <li><a href="#privacidade">Políticas de Privacidade</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= BANNER ================= -->
+<div class="banner">
+  <h1>Cabeleireiros, Manicure e Pedicure</h1>
+  <p>Ubatuba – São Paulo | CNPJ 48.611.491/0001-33</p>
+</div>
+
+<!-- ================= CONTEÚDO ================= -->
+<main>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>A empresa <strong>Luiz Eduardo de Jesus Reis</strong> de CNPJ
+      <strong>48.611.491/0001-33</strong>, foi fundada em <strong>14/11/2022</strong>
+      na cidade de Ubatuba, no estado de São Paulo. Sua atividade principal,
+      conforme a Receita Federal, é <strong>96.02-5-01 – Cabeleireiros, manicure e
+      pedicure</strong>. Sua situação cadastral até o momento é
+      <span class="status-ativa">Ativa</span>.</p>
+
+    <h3>Dados Cadastrais</h3>
+    <table class="dados">
+      <tr><td>CNPJ</td><td>48.611.491/0001-33 – 48611491000133</td></tr>
+      <tr><td>Razão Social</td><td>Luiz Eduardo de Jesus Reis</td></tr>
+      <tr><td>Data da Abertura</td><td>14/11/2022 (3 anos, 10 meses e 22 dias)</td></tr>
+      <tr><td>Porte</td><td>Microempreendedor Individual (MEI)</td></tr>
+      <tr><td>Natureza Jurídica</td><td>Empresário (Individual)</td></tr>
+      <tr><td>Opção pelo MEI</td><td>Sim</td></tr>
+      <tr><td>Opção pelo Simples</td><td>Sim</td></tr>
+      <tr><td>Data opção Simples</td><td>14/11/2022</td></tr>
+      <tr><td>Capital Social</td><td>R$ 5.000,00</td></tr>
+      <tr><td>Tipo</td><td>Matriz</td></tr>
+      <tr><td>Situação</td><td class="status-ativa">Ativa</td></tr>
+      <tr><td>Data Situação Cadastral</td><td>14/11/2022</td></tr>
+    </table>
+
+    <h3>Atividades – CNAES</h3>
+    <p><strong>Principal:</strong> 96.02-5-01 – Cabeleireiros, manicure e pedicure</p>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao">
+    <h2>Localização</h2>
+    <table class="dados">
+      <tr><td>Logradouro</td><td>Rua Coronel Ernesto de Oliveira, 55</td></tr>
+      <tr><td>Complemento</td><td>Loja 19</td></tr>
+      <tr><td>Bairro</td><td>Centro</td></tr>
+      <tr><td>CEP</td><td>11690-075</td></tr>
+      <tr><td>Município</td><td>Ubatuba</td></tr>
+      <tr><td>Estado</td><td>São Paulo</td></tr>
+    </table>
+
+    <h3>Para correspondência</h3>
+    <div class="contato-box">
+      Luiz Eduardo de Jesus Reis<br>
+      Rua Coronel Ernesto de Oliveira, 55 – Loja 19<br>
+      Centro – Ubatuba/SP<br>
+      CEP: 11690-075
+    </div>
+
+    <p style="margin-top:14px;">
+      <a class="voltar-topo"
+         href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075"
+         target="_blank" rel="noopener">📍 Procurar no Google Maps</a>
+    </p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="contato-box">
+      <strong>E-mail:</strong>
+      <a href="mailto:luized.reis@gmail.com">luized.reis@gmail.com</a>
+      &nbsp;(<a href="mailto:luized.reis@gmail.com">Enviar E-mail</a>)
+    </div>
+  </section>
+
+  <!-- TERMOS DE USO -->
+  <section id="termos">
+    <h2>Termos de Uso</h2>
+    <p>Ao acessar e utilizar este site, você concorda com os termos e condições
+      descritos abaixo. Caso não concorde, recomendamos que não utilize a página.</p>
+
+    <h3>1. Finalidade do site</h3>
+    <p>Este site tem caráter informativo, divulgando os serviços de cabeleireiro,
+      manicure e pedicure prestados pela empresa Luiz Eduardo de Jesus Reis,
+      CNPJ 48.611.491/0001-33, bem como seus dados cadastrais e formas de contato.</p>
+
+    <h3>2. Uso das informações</h3>
+    <p>O usuário compromete-se a utilizar o conteúdo do site apenas para fins
+      lícitos, sendo vedada qualquer reprodução, distribuição ou modificação
+      sem autorização prévia e expressa do titular.</p>
+
+    <h3>3. Propriedade intelectual</h3>
+    <p>Textos, marcas, logotipos e demais elementos deste site são de propriedade
+      de seus respectivos titulares, sendo protegidos pela legislação vigente.</p>
+
+    <h3>4. Isenção de responsabilidade</h3>
+    <p>As informações são fornecidas “como estão”. Embora busquemos mantê-las
+      atualizadas, não garantimos ausência de erros ou interrupções no acesso.</p>
+
+    <h3>5. Alterações</h3>
+    <p>Estes Termos de Uso podem ser alterados a qualquer momento, sem aviso
+      prévio. Recomendamos a consulta periódica desta página.</p>
+
+    <h3>6. Legislação aplicável</h3>
+    <p>Aplica-se a legislação brasileira, ficando eleito o foro da comarca de
+      Ubatuba/SP para dirimir eventuais controvérsias.</p>
+  </section>
+
+  <!-- POLÍTICAS DE PRIVACIDADE -->
+  <section id="privacidade">
+    <h2>Políticas de Privacidade</h2>
+    <p>A sua privacidade é importante para nós. Esta política explica como
+      coletamos, usamos e protegemos as informações dos usuários, em conformidade
+      com a Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018).</p>
+
+    <h3>1. Coleta de dados</h3>
+    <p>Este site não coleta dados pessoais automaticamente, exceto aqueles
+      fornecidos voluntariamente pelo usuário por meio do e-mail de contato
+      (luized.reis@gmail.com) ou de eventuais formulários disponíveis.</p>
+
+    <h3>2. Uso dos dados</h3>
+    <p>Os dados fornecidos são utilizados exclusivamente para responder
+      solicitações, agendamentos e demais comunicações relacionadas aos serviços
+      prestados.</p>
+
+    <h3>3. Compartilhamento</h3>
+    <p>Não compartilhamos, vendemos ou alugamos dados pessoais a terceiros,
+      salvo quando exigido por lei ou ordem judicial.</p>
+
+    <h3>4. Cookies</h3>
+    <p>O site pode utilizar cookies para melhorar a navegação. O usuário pode
+      desativá-los nas configurações do próprio navegador.</p>
+
+    <h3>5. Direitos do titular</h3>
+    <p>O titular dos dados pode solicitar acesso, correção, exclusão ou
+      portabilidade de suas informações, entrando em contato pelo e-mail
+      luized.reis@gmail.com.</p>
+
+    <h3>6. Segurança</h3>
+    <p>Adotamos medidas técnicas e administrativas razoáveis para proteger os
+      dados contra acessos não autorizados, perdas ou alterações.</p>
+
+    <h3>7. Contato do responsável</h3>
+    <p>Para dúvidas sobre esta política, entre em contato pelo e-mail
+      luized.reis@gmail.com.</p>
+  </section>
+
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer>
+  <div class="footer-grid">
+
+    <!-- Horário / Relógio -->
+    <div>
+      <h4>Horário de Atendimento</h4>
+      <p>Segunda a Sábado</p>
+      <div class="relogio">
+        <div class="hora" id="horaAtual">--:--:--</div>
+        <div class="data" id="dataAtual">Carregando...</div>
+      </div>
+    </div>
+
+    <!-- Dados cadastrais -->
+    <div>
+      <h4>Dados Cadastrais</h4>
+      <ul>
+        <li><strong>CNPJ:</strong> 48.611.491/0001-33</li>
+        <li><strong>Razão Social:</strong> Luiz Eduardo de Jesus Reis</li>
+        <li><strong>Abertura:</strong> 14/11/2022</li>
+        <li><strong>Porte:</strong> MEI</li>
+        <li><strong>Natureza:</strong> Empresário (Individual)</li>
+        <li><strong>Situação:</strong> <span class="status-ativa">Ativa</span></li>
+        <li><strong>CNAE:</strong> 96.02-5-01</li>
+      </ul>
+    </div>
+
+    <!-- Localização -->
+    <div>
+      <h4>Localização</h4>
+      <p>Rua Coronel Ernesto de Oliveira, 55<br>
+         Loja 19 – Centro<br>
+         Ubatuba/SP – CEP 11690-075</p>
+      <p><a href="mailto:luized.reis@gmail.com">luized.reis@gmail.com</a></p>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Ernesto+de+Oliveira+55+Loja+19+Centro+Ubatuba+SP+11690-075"
+           target="_blank" rel="noopener">Ver no Google Maps →</a>
+      </p>
+    </div>
+
+    <!-- Links institucionais -->
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+        <li><a href="#privacidade">Políticas de Privacidade</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="copy">
+    &copy; <span id="anoAtual"></span> Luiz Eduardo de Jesus Reis – CNPJ 48.611.491/0001-33.
+    Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- ================= SCRIPT DO RELÓGIO ================= -->
+<script>
+  function atualizarRelogio() {
+    const agora = new Date();
+    const pad = n => String(n).padStart(2, '0');
+
+    const hora = pad(agora.getHours()) + ':' + pad(agora.getMinutes()) + ':' + pad(agora.getSeconds());
+
+    const diasSemana = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+    const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+    const data = diasSemana[agora.getDay()] + ', ' + pad(agora.getDate()) + ' de ' +
+                 meses[agora.getMonth()] + ' de ' + agora.getFullYear();
+
+    document.getElementById('horaAtual').textContent = hora;
+    document.getElementById('dataAtual').textContent = data;
+    document.getElementById('anoAtual').textContent = agora.getFullYear();
+  }
+
+  atualizarRelogio();
+  setInterval(atualizarRelogio, 1000);
+
+  // Rolagem suave nos links internos
+  document.querySelectorAll('nav a, footer a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const alvo = document.querySelector(link.getAttribute('href'));
+      if (alvo) {
+        e.preventDefault();
+        alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
